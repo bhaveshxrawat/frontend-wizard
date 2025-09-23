@@ -1,0 +1,52 @@
+body {
+  background-color: #f5d6b4;
+  display: grid;
+  place-items: center;
+  height: 100svh;
+}
+.spiral {
+  position: relative;
+  translate: -30px;
+  > * {
+    position: absolute;
+    left: 0;
+  }
+  i {
+    translate: -50% -50%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #d86f45;
+    border-radius: 50%;
+  }
+  #outer-dot {
+    transform: translateX(-80px);
+  }
+  div {
+    border: 20px solid #d86f45;
+    border-bottom: none;
+    border-radius: 100px 100px 0 0;
+  }
+  #inner-first-curve {
+    width: 80px;
+    height: 44px;
+    translate: -10px -42px;
+  }
+  #inner-second-curve {
+    width: 120px;
+    height: 60px;
+    rotate: 180deg;
+    translate: -50px 0px;
+  }
+  #inner-third-curve {
+    width: 160px;
+    height: 80px;
+    translate: -50px -80px;
+  }
+  #inner-fourth-curve {
+    width: 200px;
+    height: 100px;
+    rotate: 180deg;
+    translate: -90px 0px;
+  }
+}
