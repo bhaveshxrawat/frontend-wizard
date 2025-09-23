@@ -1,0 +1,53 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #f4dcbf;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+}
+.flower {
+  display: grid;
+  grid-template-areas:
+    "tl-long . tr-long"
+    ". square ."
+    "bl-long . br-long";
+  align-items: center;
+}
+i {
+  display: inline-block;
+  color: #d95362;
+  background-color: currentColor;
+}
+i:not(#square) {
+  height: 120px;
+  border: 30px solid currentColor;
+}
+#square {
+  width: 30px;
+  height: 30px;
+  place-self: center;
+  grid-area: square;
+}
+#tl-long {
+  grid-area: tl-long;
+}
+#tr-long {
+  grid-area: tr-long;
+}
+#br-long {
+  grid-area: br-long;
+}
+#bl-long {
+  grid-area: bl-long;
+}
+#tl-long,
+#br-long {
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+#tr-long,
+#bl-long {
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
