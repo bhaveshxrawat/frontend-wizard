@@ -1,0 +1,15 @@
+html {
+  background-color: #fdf7ef;
+}
+
+body {
+  padding: 1rem;
+}
+
+.task {
+  margin-top: 1rem;
+  ul {
+    padding-inline-start: 1.2em;
+    font-size: 1.2rem;
+  }
+}
