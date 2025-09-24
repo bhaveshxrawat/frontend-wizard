@@ -1,6 +1,6 @@
 "use client";
 
-import { memo, useState } from "react";
+import { memo, Suspense, useState } from "react";
 import sampleData from "@/app/data/sampleData.json";
 import type { Data } from "../types";
 import CalendarSection from "./CalendarSection";
@@ -15,8 +15,10 @@ export default function BirthdayCalendar() {
   const MemoedYearSection = memo(YearSection);
   return (
     <div className="page">
-      <CalendarSection data={data} />
-      <MemoedYearSection />
+      <Suspense>
+        <CalendarSection data={data} />
+        <MemoedYearSection />
+      </Suspense>
       <Textarea data={data} changeHandler={handleDataChange} />
     </div>
   );
