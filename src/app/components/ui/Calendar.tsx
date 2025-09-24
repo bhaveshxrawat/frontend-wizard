@@ -1,8 +1,8 @@
-import type { days } from "@/app/consts";
+import type { DAYS } from "@/app/consts";
 import { fromFullNameToInitials, randomizeColor } from "@/app/utils";
 
 type Props = React.ComponentProps<"div"> & {
-  day: (typeof days)[number];
+  day: (typeof DAYS)[number];
   data: {
     name: string;
     birthday: string;
