@@ -1,0 +1,95 @@
+@layer theme {
+  :root {
+    --shade-1: #545d79;
+    --shade-2: #8ab721;
+    --shade-3: #c77d99;
+    --shade-4: #78cae3;
+    --shade-5: #e64a33;
+  }
+}
+
+@layer base {
+  html {
+    background-color: #fdf7ef;
+  }
+}
+
+@layer styles {
+  .page {
+    min-height: 100svh;
+    display: grid;
+    grid-template-areas:
+      "calendar year"
+      "calendar data";
+    grid-template-columns: 2fr minmax(18.75rem, 1fr);
+    grid-template-rows: auto 1fr;
+    padding: 0.5em;
+    gap: 1.5rem;
+    .calendar {
+      grid-area: calendar;
+      .calendar-list {
+        display: grid;
+        margin-top: 1.5rem;
+        gap: 0.5em;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(min(100%, 15.625rem), 1fr)
+          );
+      }
+    }
+    .year {
+      justify-self: end;
+      align-self: start;
+      select {
+        padding: 0.25em 0.5em;
+        field-sizing: content;
+      }
+    }
+    .jsonData {
+      textarea {
+        resize: vertical;
+        width: 100%;
+        line-height: 1.75;
+        padding: 0.75em;
+      }
+      button {
+        margin-top: 0.25rem;
+        padding: 0.5em 1em;
+        font-size: 1rem;
+        border: 0.5px solid currentColor;
+        border-radius: 2em;
+        background-color: white;
+      }
+    }
+  }
+}
+
+@layer components {
+  .calendar-item {
+    border: #000 solid 0.5px;
+    header {
+      padding: 1em;
+      font-size: 1rem;
+      font-weight: 600;
+      border-bottom: 0.5px solid #000;
+    }
+    .name-grid {
+      list-style: none;
+      aspect-ratio: 1 / 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 4.375rem), 1fr));
+      align-content: start;
+      font-size: 1.25rem;
+      font-weight: 600;
+      overflow-y: auto;
+      color: white;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+        aspect-ratio: 1 / 1;
+      }
+    }
+  }
+}

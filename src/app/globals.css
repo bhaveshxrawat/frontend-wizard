@@ -15,4 +15,22 @@
   a {
     color: inherit;
   }
+
+  button,
+  [role="button"] {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  textarea,
+  input,
+  select,
+  option {
+    display: block;
+    font: inherit;
+  }
 }
