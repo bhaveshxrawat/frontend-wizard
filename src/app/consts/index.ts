@@ -1,4 +1,4 @@
-export const days = [
+export const DAYS = [
   "Sunday",
   "Monday",
   "Tuesday",
@@ -7,3 +7,5 @@ export const days = [
   "Friday",
   "Saturday",
 ] as const;
+
+export const DEFAULT_YEAR = 2015;
